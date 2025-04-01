@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* .source-code-pro {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.rubik {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+body {
+  background-color: #37323c;
+  font-family: "Source Code Pro";
+  font-size: 10px;
+  background-image: url('images/momo-studio-Lgiq_KRVwvw-unsplash.jpg');
+  background-size: contain;
+}
+
+h1 {
+  color: #37323c;
+  font-size: 3rem;
+}
+
+h2 {
+  color: #37323c;
+  font-size: 2.5rem;
+}
+
+p, li {
+  color: #37323c;
+  font-size: 2rem;
+}
+
+a {
+  color: #7dc8fa;
+}
+
+.flex-2 {
+  background-color:#f5f5dc;
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+.flex-2, .flex-2 div {
+  border: 1px solid black;
+  margin: 4px;
+}
+
+.flex-2 div {
+  flex: 1;
+}
