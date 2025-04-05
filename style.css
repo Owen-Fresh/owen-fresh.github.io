@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+/* --reset-- */
+
+* {
+  box-sizing: border-box;
+}
+
 /* .source-code-pro {
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
@@ -14,46 +20,44 @@
   font-style: normal;
 } */
 
-body {
-  background-color: #37323c;
-  font-family: "Source Code Pro";
-  font-size: 10px;
-  background-image: url('images/momo-studio-Lgiq_KRVwvw-unsplash.jpg');
-  background-size: contain;
+body{
+  background-color: #37323C;
+  margin: 0 auto;
+  font-family: "Source Code Pro", monospace;
+  text-align: center;
 }
 
 h1 {
-  color: #37323c;
-  font-size: 3rem;
+  color: #F5F5DC;
 }
 
 h2 {
-  color: #37323c;
-  font-size: 2.5rem;
-  margin: 16px;
+  color: #F5F5DC;
 }
 
-p, li {
-  color: #37323c;
-  font-size: 2rem;
-}
-
-a {
-  color: #7dc8fa;
-}
-
-.flex-2 {
-  background-color:#f5f5dc;
+.boxes {
   display: flex;
-  width: 80%;
-  margin: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
 }
 
-.flex-2, .flex-2 div {
-  border: 1px solid black;
-  margin: 4px;
+.box-1 {
+  background-color: #7dc8fa;
 }
 
-.flex-2 div {
-  flex: 1;
+.box-2 {
+  background-color: #fa6464;
+}
+
+.box-1, .box-2 {
+  width: 32vw;
+  height: 32vh;
+  border-radius: 32px;
+  box-shadow: -3px 3px 14px white inset, 5px 5px 8px rgb(25, 25, 35);
+  transition: all 250ms ease-out;
+}
+
+.box-1:active, .box-2:active {
+  box-shadow: 3px -3px 6px black inset;
 }
