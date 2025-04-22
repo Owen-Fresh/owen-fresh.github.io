@@ -7,20 +7,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- <script>
-  src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-  type="module"
-</script>
-
-<dotlottie-player
-  src="https://lottie.host/a65c5947-024a-43dc-b03f-d9fdcb11c6cd/gItLltgSfK.lottie"
-  background="transparent"
-  speed="1.25"
-  style="width: 100%;"
-  loop
-  autoplay
-></dotlottie-player> -->
-
 
 <section>
   <img class="mother-tree" src="DES342_Proj01_Mother-TreeMother-Tree-V2.png" alt="The Mother Tree">
@@ -109,22 +95,34 @@ let tl = gsap.timeline({
     end: "bottom bottom",
     scrub: true,
     markers: true,
+    toggleActions: "play reset reverse reset",
   }
 });
 
-tl.to(".lemon", {
-  y: 1000,
-  rotate: -45,
+// let tl2 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: '.mother-tree',
+//     start: "top+=300 top",
+//     end: "bottom bottom",
+//     scrub: true,
+//     markers: true,
+//   }
+// })
+
+// tl.to(".lemon", {
+//   rotate: -45,
+//   y: 1000
+// })
+
+tl.to(".verse", { 
+  y: 200
 })
 
-tl.to(".verse", {
-  y: 250
-})
 
 // wait until video metadata is loaded, so we can grab the proper duration before adding the onscroll animation. Might need to add a loader for loonng videos
-coolVideo.onloadedmetadata = function () {
-  tl.to(coolVideo, { currentTime: coolVideo.duration });
-};
+// coolVideo.onloadedmetadata = function () {
+//   tl.to(coolVideo, { currentTime: coolVideo.duration });
+// };
 
 // Dealing with devices
 // function isTouchDevice() {
