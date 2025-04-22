@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- <script>
+  src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+  type="module"
+</script>
+
+<dotlottie-player
+  src="https://lottie.host/a65c5947-024a-43dc-b03f-d9fdcb11c6cd/gItLltgSfK.lottie"
+  background="transparent"
+  speed="1.25"
+  style="width: 100%;"
+  loop
+  autoplay
+></dotlottie-player> -->
+
+
+<section>
+  <img class="mother-tree" src="DES342_Proj01_Mother-TreeMother-Tree-V2.png" alt="The Mother Tree">
+</section>
+
+<div>
+  <img class="lemon" src="lemon.png" alt="The Little lemon">
+</div>
+
+<!-- <video class="video" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted">
+  <source src="DES342_Proj01_Walkingman-02.webm" type="video/webm"/>
+</video> -->
+
+<section class="verse">
+  <div class="verse1" id="show">
+    <p>little lemon, little lemon</p>
+    <p>hanging on a tree</p>
+    <p>clinging to its branch</p>
+    <p>as you dance in the breeze</p>
+  </div>
+  <div class="verse2">
+    <p>mother tree, mother tree</p>
+    <p>you let your lemon fall</p>
+    <p>it&#39;s falling through the sky</p>
+    <p>as your bare branch shows</p>
+  </div>
+  <div class="verse3">
+    <p>cold earth, cold earth</p>
+    <p>your dirt is on its skin</p>
+    <p>but it still fell on you</p>
+    <p>and now there it will rest</p>
+  </div>
+  <div class="verse4">
+    <p>walking man, walking man</p>
+    <p>what have you found?</p>
+    <p>you were on a stroll outside</p>
+    <p>and see a lemon on the ground</p>
+  </div>
+  <div class="verse5">
+    <p>soft hand, soft hand</p>
+    <p>hold the lemon close to you</p>
+    <p>and take it somewhere</p>
+    <p>where it can be of good use</p>
+  </div>
+  <div class="verse6">
+    <p>little lemon, little lemon</p>
+    <p>you are now fully grown</p>
+    <p>you left your mother tree</p>
+    <p>to find a new home</p>
+  </div>
+  <div class="verse7">
+    <p>good luck, little lemon</p>
+    <p>mother tree waves farewell</p>
+    <p>walking man has you now</p>
+    <p>for his drink you will excel</p>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script>
+
+  // ORIGINAL FROM - https://codepen.io/wisearts/pen/ExZGrbZ?editors=0010
+// saved to the GSAP account to avoid losing the resource, thanks Rachelle
+/* Encoding is important!!!
+//--------------------------------
+// ffmpeg settings used:
+--------------------------------
+
+ffmpeg -i input.mp4 -vf scale=960:-1 -movflags faststart -vcodec libx264 -crf 20 -g 1 -pix_fmt yuv420p output.mp4
+
+// scale filtergraph optional
+// ffmpeg docs: http://ffmpeg.org/ffmpeg.html
+
+*/
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+// const coolVideo = document.querySelector('.video');
+
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.mother-tree',
+    start: "top+=200 top",
+    end: "bottom bottom",
+    scrub: true,
+    markers: true,
+  }
+});
+
+tl.to(".lemon", {
+  y: 1000,
+  rotate: -45,
+})
+
+tl.to(".verse", {
+  y: 250
+})
+
+// wait until video metadata is loaded, so we can grab the proper duration before adding the onscroll animation. Might need to add a loader for loonng videos
+coolVideo.onloadedmetadata = function () {
+  tl.to(coolVideo, { currentTime: coolVideo.duration });
+};
+
+// Dealing with devices
+// function isTouchDevice() {
+//   return (
+//     "ontouchstart" in window ||
+//     navigator.maxTouchPoints > 0 ||
+//     navigator.msMaxTouchPoints > 0
+//   );
+// }
+// if (isTouchDevice()) {
+//   coolVideo.play();
+//   coolVideo.pause();
+// }
+
+</script>
+</body>
+</html>
