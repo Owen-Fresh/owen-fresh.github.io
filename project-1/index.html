@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>little lemon</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,12 +16,16 @@
   <img class="lemon" src="lemon.png" alt="The Little lemon">
 </div>
 
+<div class="walkman">
+  <img src="DES342_Proj01_walk-cycle.gif" alt="walking man walking">
+</div>
+
 <video class="video" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted">
   <source src="DES342_Proj01_Walkingman-02.webm" type="video/webm"/>
 </video>
 
 <section class="verse">
-  <div class="verse1" id="show">
+  <div class="verse1">
     <p>little lemon, little lemon</p>
     <p>hanging on a tree</p>
     <p>clinging to its branch</p>
@@ -29,39 +33,27 @@
   </div>
   <div class="verse2">
     <p>mother tree, mother tree</p>
-    <p>you let your lemon fall</p>
-    <p>it&#39;s falling through the sky</p>
+    <p>you let your lemon go</p>
+    <p>it&apos;s falling through the sky</p>
     <p>as your bare branch shows</p>
   </div>
   <div class="verse3">
     <p>cold earth, cold earth</p>
     <p>your dirt is on its skin</p>
-    <p>but it still fell on you</p>
-    <p>and now there it will rest</p>
+    <p>yet it still fell on you</p>
+    <p>now there it will rest</p>
   </div>
   <div class="verse4">
-    <p>walking man, walking man</p>
-    <p>what have you found?</p>
-    <p>you were on a stroll outside</p>
-    <p>and see a lemon on the ground</p>
+    <p>walk man, walk man</p>
+    <p>what&apos;s that in the dirt?</p>
+    <p>take the little lemon</p>
+    <p></p>
   </div>
   <div class="verse5">
-    <p>soft hand, soft hand</p>
-    <p>hold the lemon close to you</p>
-    <p>and take it somewhere</p>
-    <p>where it can be of good use</p>
-  </div>
-  <div class="verse6">
     <p>little lemon, little lemon</p>
-    <p>you are now fully grown</p>
-    <p>you left your mother tree</p>
-    <p>to find a new home</p>
-  </div>
-  <div class="verse7">
-    <p>good luck, little lemon</p>
-    <p>mother tree waves farewell</p>
-    <p>walking man has you now</p>
-    <p>for his drink you will excel</p>
+    <p>walk man passed you by</p>
+    <p>now you&apos;ve been left alone</p>
+    <p>please don&apos;t cry.</p>
   </div>
 </section>
 
@@ -71,81 +63,146 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 <script>
 
-  // ORIGINAL FROM - https://codepen.io/wisearts/pen/ExZGrbZ?editors=0010
-// saved to the GSAP account to avoid losing the resource, thanks Rachelle
-/* Encoding is important!!!
-//--------------------------------
-// ffmpeg settings used:
---------------------------------
-
-ffmpeg -i input.mp4 -vf scale=960:-1 -movflags faststart -vcodec libx264 -crf 20 -g 1 -pix_fmt yuv420p output.mp4
-
-// scale filtergraph optional
-// ffmpeg docs: http://ffmpeg.org/ffmpeg.html
-
-*/
-
-
 gsap.registerPlugin(ScrollTrigger);
 
+// let tl = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: '.mother-tree',
+//     start: "top+=200 top",
+//     end: "bottom-=200 bottom-=200",
+//     scrub: true,
+//     markers: true
+//   }
+// })
 
+// tl.to(".verse1", {
+//   y: 200,
+//   opacity: 0
+// }).to(".verse2", {
+//   opacity: 100
+// }).to(".verse2", {
+//   y: 200,
+//   opacity: 0
+// }).to(".verse3", {
+//   opacity: 100
+// }).to(".verse3", {
+//   y: 100,
+//   opacity: 0
+// }).to(".verse4", {
+//   opacity: 100
+// }).to(".verse4", {
+//   opacity: 0
+// })
 
-let tl = gsap.timeline({
+gsap.to(".lemon", {
   scrollTrigger: {
     trigger: '.mother-tree',
     start: "top+=200 top",
     end: "bottom bottom",
     scrub: true,
-    //markers: true,
-    // toggleActions: "play reset reset reset",
-  }
+    // markers: true
+  },
+  rotate: -80,
+  y: 850
 })
 
-tl.to(".lemon", {
-  rotate: -45,
-  y: 1000
-})
-
-ScrollTrigger.create({
-  trigger: ".mother-tree",
+gsap.to('.verse1', {
+  scrollTrigger: {
+    trigger: '.verse1',
+    start: "top center",
+    end: "bottom top+=200",
+    scrub: 0.5,
+    toggleActions: "play none reverse reverse",
+    // markers: true
+  },
   y: 200,
-  reverse: true,
-  start: "25% top",
-  end: "bottom bottom",
-  scrub: true,
-  pin: true,
-  markers: true,
-  // toggleClass: {targets: '.verse', className: 'foo'}
+  opacity: 0
 })
 
-// gsap.to(".verse", {
-//   y: 200,
-//   ScrollTrigger: ".verse",
-//   reverse: true,
-//   start: "top top",
-//   scrub: true,
-//   markers: true
+gsap.to('.verse2', {
+  scrollTrigger: {
+    trigger: '.verse1',
+    start: 'center center',
+    end: 'bottom+=200 top+=200',
+    scrub: 0.5,
+    toggleActions: "play none reverse reverse",
+    // markers: true
+  },
+  opacity: 100,
+})
+
+gsap.to('.verse2', {
+  scrollTrigger: {
+    trigger: '.verse2',
+    start: 'bottom center',
+    end: 'bottom+=200 top+=200',
+    scrub: 0.5,
+    toggleActions: "play none reverse reverse",
+    // markers: true
+  },
+  y: 200,
+  opacity: 0  
+})
+
+gsap.to('.verse3', {
+  scrollTrigger: {
+    trigger: '.verse3',
+    start: 'top center',
+    end: 'bottom+=200 top+=200',
+    scrub: 0.5,
+    toggleActions: "play none reverse reverse",
+    // markers: true
+  },
+  opacity: 100
+})
+
+gsap.to('.verse3', {
+  scrollTrigger: {
+    trigger: '.verse3',
+    start: 'center center',
+    end: 'bottom+=200 top+=200',
+    scrub: 0.5,
+    toggleActions: "play none reverse reset",
+    markers: true
+  },
+  opacity: 0
+})
+
+gsap.to('.verse4', {
+  scrollTrigger: {
+    trigger: '.verse3',
+    start: 'center+=50 center',
+    end: 'bottom+=200 top+=200',
+    scrub: 0.5,
+    toggleActions: "play none reverse reverse",
+    markers: true
+  },
+  opacity: 100
+})
+
+gsap.to('.verse4', {
+  scrollTrigger: {
+    trigger: '.verse3',
+    start: 'center+=100 center',
+    end: 'bottom+=200 top+=200',
+    scrub: 0.5,
+    toggleActions: "play none reverse reverse",
+    markers: true
+  },
+  opacity: 0
+})
+
+// gsap.to('.verse5', {
+//   scrollTrigger: {
+//     trigger: '.verse3',
+//     start: 'bottom+=35 center',
+//     end: 'bottom+=200 top+=200',
+//     scrub: 0.5,
+//     toggleActions: "play none reverse reverse",
+//     markers: true
+//   },
+//   opacity: 100
 // })
-
-
-// wait until video metadata is loaded, so we can grab the proper duration before adding the onscroll animation. Might need to add a loader for loonng videos
-// coolVideo.onloadedmetadata = function () {
-//   tl.to(coolVideo, { currentTime: coolVideo.duration });
-// };
-
-// Dealing with devices
-// function isTouchDevice() {
-//   return (
-//     "ontouchstart" in window ||
-//     navigator.maxTouchPoints > 0 ||
-//     navigator.msMaxTouchPoints > 0
-//   );
-// }
-// if (isTouchDevice()) {
-//   coolVideo.play();
-//   coolVideo.pause();
-// }
-
 
 </script>
 </body>
