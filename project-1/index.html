@@ -20,10 +20,6 @@
   <img src="DES342_Proj01_walk-cycle.gif" alt="walking man walking">
 </div>
 
-<video class="video" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted">
-  <source src="DES342_Proj01_Walkingman-02.webm" type="video/webm"/>
-</video>
-
 <section class="verse">
   <div class="verse1">
     <p>little lemon, little lemon</p>
@@ -65,34 +61,6 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
-// let tl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: '.mother-tree',
-//     start: "top+=200 top",
-//     end: "bottom-=200 bottom-=200",
-//     scrub: true,
-//     markers: true
-//   }
-// })
-
-// tl.to(".verse1", {
-//   y: 200,
-//   opacity: 0
-// }).to(".verse2", {
-//   opacity: 100
-// }).to(".verse2", {
-//   y: 200,
-//   opacity: 0
-// }).to(".verse3", {
-//   opacity: 100
-// }).to(".verse3", {
-//   y: 100,
-//   opacity: 0
-// }).to(".verse4", {
-//   opacity: 100
-// }).to(".verse4", {
-//   opacity: 0
-// })
 
 gsap.to(".lemon", {
   scrollTrigger: {
@@ -106,103 +74,138 @@ gsap.to(".lemon", {
   y: 850
 })
 
-gsap.to('.verse1', {
-  scrollTrigger: {
-    trigger: '.verse1',
-    start: "top center",
-    end: "bottom top+=200",
-    scrub: 0.5,
-    toggleActions: "play none reverse reverse",
-    // markers: true
-  },
-  y: 200,
-  opacity: 0
-})
+gsap.set('.verse2', {opacity: 0})
+gsap.set('.verse3', {opacity: 0})
+gsap.set('.verse4', {opacity: 0})
+gsap.set('.verse5', {opacity: 0})
 
-gsap.to('.verse2', {
-  scrollTrigger: {
-    trigger: '.verse1',
-    start: 'center center',
-    end: 'bottom+=200 top+=200',
-    scrub: 0.5,
-    toggleActions: "play none reverse reverse",
-    // markers: true
-  },
-  opacity: 100,
-})
+// gsap.to('.verse1', {
+//   scrollTrigger: {
+//     trigger: '.verse1',
+//     start: "top center",
+//     end: "bottom top+=200",
+//     scrub: 0.5,
+//     toggleActions: "play none reverse reverse",
+//     // markers: true
+//   },
+//   y: 200,
+//   opacity: 0
+// });
 
-gsap.to('.verse2', {
-  scrollTrigger: {
-    trigger: '.verse2',
-    start: 'bottom center',
-    end: 'bottom+=200 top+=200',
-    scrub: 0.5,
-    toggleActions: "play none reverse reverse",
-    // markers: true
-  },
-  y: 200,
-  opacity: 0  
-})
+// gsap.to('.verse2', {
+//   scrollTrigger: {
+//     trigger: '.verse1',
+//     start: 'center center',
+//     end: 'bottom+=200 top+=200',
+//     scrub: 0.5,
+//     toggleActions: "play none reverse reverse",
+//     // markers: true
+//   },
+//   opacity: 100
+// });
 
-gsap.to('.verse3', {
-  scrollTrigger: {
-    trigger: '.verse3',
-    start: 'top center',
-    end: 'bottom+=200 top+=200',
-    scrub: 0.5,
-    toggleActions: "play none reverse reverse",
-    // markers: true
-  },
-  opacity: 100
-})
+// gsap.to('.verse2', {
+//   scrollTrigger: {
+//     trigger: '.verse2',
+//     start: 'center center',
+//     end: 'bottom+=50 top+=200',
+//     scrub: 0.5,
+//     toggleActions: "play none reverse reverse",
+//     // markers: true
+//   },
+//   y: 200,
+//   opacity: 0  
+// });
 
-gsap.to('.verse3', {
-  scrollTrigger: {
-    trigger: '.verse3',
-    start: 'center center',
-    end: 'bottom+=200 top+=200',
-    scrub: 0.5,
-    toggleActions: "play none reverse reset",
-    markers: true
-  },
-  opacity: 0
-})
-
-gsap.to('.verse4', {
-  scrollTrigger: {
-    trigger: '.verse3',
-    start: 'center+=50 center',
-    end: 'bottom+=200 top+=200',
-    scrub: 0.5,
-    toggleActions: "play none reverse reverse",
-    markers: true
-  },
-  opacity: 100
-})
-
-gsap.to('.verse4', {
-  scrollTrigger: {
-    trigger: '.verse3',
-    start: 'center+=100 center',
-    end: 'bottom+=200 top+=200',
-    scrub: 0.5,
-    toggleActions: "play none reverse reverse",
-    markers: true
-  },
-  opacity: 0
-})
-
-// gsap.to('.verse5', {
+// gsap.to('.verse3', {
 //   scrollTrigger: {
 //     trigger: '.verse3',
-//     start: 'bottom+=35 center',
+//     start: 'top center',
 //     end: 'bottom+=200 top+=200',
 //     scrub: 0.5,
 //     toggleActions: "play none reverse reverse",
 //     markers: true
 //   },
 //   opacity: 100
-// })
+// });
+
+// gsap.to('.verse3', {
+//   scrollTrigger: {
+//     trigger: '.verse3',
+//     start: 'center center',
+//     end: 'bottom+=200 top+=200',
+//     scrub: 0.5,
+//     toggleActions: "play none reverse reset",
+//     // markers: true
+//   },
+//   opacity: 0
+// });
+
+// gsap.to('.verse4', {
+//   scrollTrigger: {
+//     trigger: '.verse3',
+//     start: 'center+=50 center',
+//     end: 'bottom+=200 top+=200',
+//     scrub: 0.5,
+//     toggleActions: "play none reverse reverse",
+//     // markers: true
+//   },
+//   opacity: 100
+// });
+
+// gsap.to('.verse4', {
+//   scrollTrigger: {
+//     trigger: '.verse3',
+//     start: 'center+=100 center',
+//     end: 'bottom+=200 top+=200',
+//     scrub: 0.5,
+//     toggleActions: "play none reverse reverse",
+//     // markers: true
+//   },
+//   opacity: 0
+// });
+
+// let tl = gsap.timeline({
+//     trigger: '.verse3',
+//     start: "top+=200 top",
+//     end: "bottom-=200 bottom-=200",
+//     scrub: true,
+//     markers: true
+// });
+
+// tl.to('.walkman', {
+//   trigger: '.verse3',
+//   start: 'center'
+// });
+
+// tl.to('.verse5', {
+//     trigger: '.verse3',
+//     start: 'bottom+=35 center',
+//     end: 'bottom+=200 top+=200',
+//     scrub: 0.5,
+//     toggleActions: "play none reverse reverse",
+//     // markers: true
+//   // opacity: 100
+// });
+
+let tl=gsap.timeline({
+  scrollTrigger: {
+    trigger: '.verse3',
+    start: 'bottom+=35 center',
+    end: 'bottom+=200 top+=200',
+    markers: true
+  }
+});
+
+tl.to('.walkman',{
+  x: 1750,
+  duration: 6,
+  ease: "none",
+  toggleActions: "play none reset reset"
+}).to('.verse5', {
+  opacity: 100,
+  toggleActions: "play none reverse reverse"
+})
 
 </script>
 </body>

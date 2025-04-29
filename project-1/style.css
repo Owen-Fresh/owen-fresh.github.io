@@ -36,10 +36,17 @@ p {
 
 .lemon {
   position: absolute;
-  z-index: 3;
+  z-index: 2;
   margin: 21% 48%;
   width: 64px;
   height: auto;
+}
+
+.walkman {
+  position: fixed;
+  z-index: 3;
+  bottom: 10%;
+  left: -20%;
 }
 
 .verse1 {
@@ -53,28 +60,28 @@ p {
   position: absolute;
   right: 10%;
   top: 90%;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .verse3 {
   position: absolute;
   right: 10%;
   top: 120%;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .verse4 {
   position: absolute;
   right: 10%;
   top: 120%;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .verse5 {
   position: absolute;
   right: 10%;
   top: 120%;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .verse1, .verse2, .verse3, .verse4, .verse5, .verse6, .verse7 {
