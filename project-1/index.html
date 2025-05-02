@@ -20,6 +20,8 @@
   <img src="DES342_Proj01_walk-cycle.gif" alt="walking man walking">
 </div>
 
+<div class="title">little lemon</div>
+
 <section class="verse">
   <div class="verse1">
     <p>little lemon, little lemon</p>
@@ -35,14 +37,14 @@
   </div>
   <div class="verse3">
     <p>cold earth, cold earth</p>
-    <p>your dirt is on its skin</p>
+    <p>your dirt is on its flesh</p>
     <p>yet it still fell on you</p>
     <p>now there it will rest</p>
   </div>
   <div class="verse4">
     <p>walk man, walk man</p>
     <p>what&apos;s that in the dirt?</p>
-    <p>you found a little lemon</p>
+    <p>there&apos;s a little lemon</p>
     <p>for you to give some worth</p>
   </div>
   <div class="verse5">
@@ -53,7 +55,7 @@
   </div>
 </section>
 
-<div></div>
+<div class="arrow">&#11163;</div>
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
@@ -74,81 +76,121 @@ gsap.to(".lemon", {
   y: 900
 })
 
+gsap.to(".arrow", {
+  scrollTrigger: {
+    trigger: '.verse1',
+    start: "top center",
+    end: "center top+=200",
+    toggleActions: "play none reverse reverse"
+  },
+  opacity: 0
+});
+
 gsap.set('.verse1', {opacity: 0})
 gsap.set('.verse2', {opacity: 0})
 gsap.set('.verse3', {opacity: 0})
 gsap.set('.verse4', {opacity: 0})
 gsap.set('.verse5', {opacity: 0})
 
-
-gsap.to('.verse1', {
-  scrollTrigger: {
-    trigger: '.verse1',
-    start: "top-=75 center",
-    end: "bottom top+=200",
-    scrub: 0.5,
-    toggleActions: "play none reverse reverse"
+gsap.to('.title', {
+  keyframes: {
+    "0%": {opacity: 100},
+    "100%": {opacity: 0}
   },
-  opacity: 100
+  scrollTrigger: {
+    trigger: '.title',
+    start: "bottom center",
+    end: "bottom top+=200",
+    toggleActions: "play none reverse reverse",
+    scrub: 0.5
+  },
 })
 
 gsap.to('.verse1', {
+  keyframes: {
+    "0%": {opacity: 0},
+    "50%": {opacity: 100}
+  },
   scrollTrigger: {
     trigger: '.verse1',
     start: "top center",
-    end: "bottom top+=200",
-    scrub: 0.5,
-    toggleActions: "play none reverse reverse"
+    end: "top top+=200",
+    toggleActions: "play none reverse reverse",
+    scrub: 0.5
   },
-  y: 200,
-  opacity: 0
-});
+})
 
-gsap.to('.verse2', {
+gsap.to('.verse1', {
+  keyframes: {
+    "1%": {y: 0, opacity: 100},
+    "75%": {y: 200, opacity: 0},
+    "100%": {opacity: 0}
+  },
   scrollTrigger: {
     trigger: '.verse1',
-    start: 'center center',
-    end: 'bottom top+=200',
-    scrub: 0.5,
-    toggleActions: "play none reverse reverse"
-    // markers: true
-  },
-  opacity: 100
+    start: "center center",
+    end: "center top+=200",
+    toggleActions: "play none reverse reverse",
+    scrub: 0.5
+  }
 });
 
 gsap.to('.verse2', {
+  keyframes: {
+    "0%": {opacity: 0},
+    "50%": {opacity: 100}
+  },
+  scrollTrigger: {
+    trigger: '.verse1',
+    start: 'bottom center',
+    end: 'bottom top+=200',
+    toggleActions: "play none reverse reverse",
+    scrub: 0.5
+  },
+});
+
+gsap.to('.verse2', {
+  keyframes: {
+    "1%": {y: 0, opacity: 100},
+    "75%": {y: 200},
+    "100%": {opacity: 0}
+  },
+  scrollTrigger: {
+    trigger: '.verse2',
+    start: 'center center',
+    end: 'center top+=200',
+    toggleActions: "play none reverse reverse",
+    scrub: 0.5
+  }
+});
+
+gsap.to('.verse3', {
+  keyframes: {
+    "0%": {opacity: 0},
+    "50%": {opacity: 100}
+  },
   scrollTrigger: {
     trigger: '.verse3',
     start: 'top center',
-    end: 'center top+=200',
-    scrub: 0.5,
-    toggleActions: "play none reverse reverse"
-    // markers: true
-  },
-  y: 200,
-  opacity: 0  
-});
-
-gsap.to('.verse3', {
-  scrollTrigger: {
-    trigger: '.verse3',
-    start: 'center center',
-    end: 'center+=50 top+=200',
-    toggleActions: "play none reverse reverse"
-    // markers: true
-  },
-  opacity: 100
+    end: 'top top+=200',
+    toggleActions: "play none reverse reverse",
+    scrub: true
+  }
 })
 
 gsap.to('.verse3', {
+  keyframes: {
+    "1%": {opacity: 100},
+    "50%": {opacity: 0},
+    "100%": {opacity: 0}
+  },
   scrollTrigger: {
     trigger: '.verse3',
-    start: 'bottom center',
-    end: 'bottom+=50 top+=200',
-    toggleActions: "play none reverse reverse"
-    // markers: true
-  },
-  opacity: 0
+    start: 'center center',
+    end: 'center top+=200',
+    toggleActions: "play none reverse reverse",
+    scrub: true
+  }
 })
 
 
@@ -158,7 +200,6 @@ let tl=gsap.timeline({
     start: 'bottom+=35 center',
     end: 'bottom+=200 top+=200',
     toggleActions: "play none reset reset"
-    // markers: true
   }
 });
 
@@ -166,7 +207,7 @@ tl.to('.verse4', {
   opacity: 100
 }).to('.walkman', {
   x: 1750,
-  duration: 6,
+  duration: 10,
   ease: "none",
 }).to('.verse4', {
   opacity: 0
@@ -175,31 +216,6 @@ tl.to('.verse4', {
   delay: 0.25,
 })
 
-// let tm=gsap.timeline({
-//   scrollTrigger: {
-//     trigger: '.verse1',
-//     start: "top center",
-//     end: "bottom top+=200",
-//     scrub: 0.5,
-//     // toggleActions: "play none reverse reverse",
-//   }
-// })
-
-// tm.to('.verse1', {
-//   y: 200,
-//   opacity: 0
-// }).to('.verse2', {
-//   opacity: 100
-// }).to('.verse2', {
-//   y: 200,
-//   opacity: 0
-// }).to('.verse3', {
-//   opacity: 100
-// }).to('.verse3', {
-//   opacity: 0
-// }).to('.verse4', {
-//   opacity: 100
-// })
 
 </script>
 </body>
