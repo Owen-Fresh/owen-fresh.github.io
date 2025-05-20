@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+svg {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+}
+
+.cls-1 {
+  fill: #662d91;
+}
+
+.cls-2 {
+  fill: #f15a24;
+}
+
+.cls-3 {
+  fill: #a12025;
+}
+
+.cls-4 {
+  fill: #1b1464;
+}
+
+.cls-5 {
+  fill: #ff7bac;
+}
+
+.cls-6 {
+  fill: gray;
+}
+
+.cls-7 {
+  fill: #fc7646;
+}
+
+.cls-8 {
+  fill: #663b3d;
+}
+
+.cls-9 {
+  fill: #e6e6e6;
+}
+
+.cls-10 {
+  fill: #e6d817;
+}
+
+.cls-11 {
+  fill: #f7f705;
+}
+
+.cls-12 {
+  fill: #009245;
+}
+
+.cls-13 {
+  fill: #d44f20;
+}
+
+.cls-14 {
+  fill: lime;
+}
+
+.cls-15 {
+  fill: #fcee21;
+}
+
+.cls-16 {
+  fill: #4d4d4d;
+}
+
+.cls-17 {
+  fill: #ccc;
+}
+
+.cls-18 {
+  fill: blue;
+}
+
+.cls-19 {
+  fill: #0071bc;
+}
+
+.cls-20 {
+  fill: #ff4a94;
+}
+
+.cls-21 {
+  fill: #870007;
+}
+
+.cls-22 {
+  fill: #fff;
+}
+
+.cls-23 {
+  fill: #ff0;
+}
+
+.cls-24 {
+  fill: #39b54a;
+}
+
+.cls-25 {
+  fill: #666;
+}
+
+.cls-26 {
+  fill: #59166e;
+}
+
+.cls-27 {
+  fill: #204868;
+}
+
+.cls-28 {
+  fill: #f7931e;
+}
+
+.cls-29 {
+  fill: #2e3192;
+}
+
+.cls-30 {
+  fill: #29abe2;
+}
+
+.cls-31 {
+  fill: red;
+}
+
+.cls-32 {
+  fill: #f2f2f2;
+}
+
+.cls-33 {
+  fill: #93278f;
+}
+
+.cls-34 {
+  fill: #c1272d;
+}
+
+.cls-35 {
+  fill: #b3b3b3;
+}
+
+.cls-36 {
+  fill: #ffff1c;
+}
+
+.cls-37 {
+  fill: #fbb03b;
+}
+
+.cls-38 {
+  fill: #006837;
+}
+
+.cls-39 {
+  fill: #6080f8;
+}
+
+.cls-40 {
+  fill: #1a1a1a;
+}
+
+.cls-41 {
+  fill: #999;
+}
+
+.cls-42 {
+  fill: #00361c;
+}
+
+.cls-43 {
+  fill: #ff1d25;
+}
