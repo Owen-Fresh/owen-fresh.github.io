@@ -25,13 +25,7 @@ gsap.registerPlugin(Draggable,EaselPlugin,Flip,InertiaPlugin,MotionPathPlugin,Mo
     Draggable.create("#bento-slider-key", {
       type: "x",
       bounds: "#bento-bounds",
-      inertia: true,
-      liveSnap: snap,
-      snap:{
-        x: function(endValue) {
-          return (snap || liveSnap) ? Math.round(endValue / gridWidth) * gridWidth : endValue;
-        }
-      }
+      inertia: true
     });
 
     Draggable.create("#cover", {
