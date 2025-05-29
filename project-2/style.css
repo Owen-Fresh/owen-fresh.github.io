@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -8,6 +10,22 @@ main {
   margin-top: 64px;
 }
 
+p {
+  font-family: "Micro 5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25rem;
+}
+
+.text-dialog {
+  position: absolute;
+}
+
+#text-dialog-1, #text-dialog-2 {
+  margin: 0px;
+  color: #f0fefa;
+}
+
 #key-1-press, #key-2-press, #key-3-press, #key-4-press, #key-5-press, #key-6-press, #key-7-press, #key-8-press, #key-9-press, #key-0-press {
   visibility: hidden;
 }
@@ -16,13 +34,9 @@ main {
   visibility: hidden;
 }
 
-/* #bento-back {
-  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-} */
-
-/* #rotate-cover {
-  transform-origin: left bottom;
-} */
+#rotate-cover {
+  transform-origin: 60px 60px;
+}
 
 .cls-1 {fill: none;}
 .cls-2 {fill: #662d91;}
