@@ -30,6 +30,10 @@ p {
   visibility: hidden;
 }
 
+.show-key {
+  visibility: hidden;
+}
+
 #door02, #door03, #door04, #door05, #door06 {
   visibility: hidden;
 }
