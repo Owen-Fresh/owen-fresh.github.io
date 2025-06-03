@@ -42,6 +42,38 @@ p {
   transform-origin: 60px 60px;
 }
 
+.red-light {
+  filter: blur(10px);
+  filter: brightness(200%);
+  filter: contrast(200%);
+  filter: saturate(150%);
+  filter: drop-shadow(-3px -3px 5px rgba(255, 25, 25, 0.75));
+}
+
+.green-light {
+  filter: blur(10px);
+  filter: brightness(200%);
+  filter: contrast(200%);
+  filter: saturate(150%);
+  filter: drop-shadow(3px -3px 5px rgba(25, 255, 25, 0.75));
+}
+
+.blue-light {
+  filter: blur(10px);
+  filter: brightness(200%);
+  filter: contrast(200%);
+  filter: saturate(150%);
+  filter: drop-shadow(-3px 3px 5px rgba(75, 75, 255, 0.75));
+}
+
+.yellow-light {
+  filter: blur(10px);
+  filter: brightness(200%);
+  filter: contrast(200%);
+  filter: saturate(150%);
+  filter: drop-shadow(3px 3px 5px rgba(255, 225, 25, 0.75));
+}
+
 .cls-1 {fill: none;}
 .cls-2 {fill: #662d91;}
 .cls-3 {fill: #f15a24;}

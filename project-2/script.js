@@ -1,11 +1,32 @@
 gsap.registerPlugin(Draggable,EaselPlugin,Flip,InertiaPlugin,MotionPathPlugin,MorphSVGPlugin,Observer,ScrambleTextPlugin,SplitText);
 
+
+    //PULL OUT BOX -->
+
     Draggable.create("#pull-out", {
       type: "x",
       bounds: "#pull-bound",
       inertia: true
     });
+
+
+    // DOT LIGHTS -->
+
+    const tl = gsap.timeline({
+      id: "dot-lights",
+      defaults: { ease: "none" }
+    });
     
+    Observer.create({
+      target: "#dots",
+      onClick: () => {
+        tl.to('#dot-1', {
+        })
+      }
+    });
+
+
+    // DROP BOX -->
 
     Observer.create({
       target: "#drop-box",
@@ -23,22 +44,25 @@ gsap.registerPlugin(Draggable,EaselPlugin,Flip,InertiaPlugin,MotionPathPlugin,Mo
       }
     });
 
-        // grab state
-    const state = Flip.getState("#bento-screen");
-      
-    // Make DOM or styling changes
-    switchItUp();
-      
-    // Animate from the initial state to the end state
-    Flip.from(state, {duration: 2, ease: "power1.inOut"});
 
-    Observer.create({
-      target: "#bento-screen",
-      onHover: () => {
-        gsap.to("#bento-screen", {
-        })
-      }
-    });
+    // BENTO SCREEN AND SLIDER -->
+
+        // grab state
+    // const state = Flip.getState("#bento-screen");
+      
+    // // Make DOM or styling changes
+    // switchItUp();
+      
+    // // Animate from the initial state to the end state
+    // Flip.from(state, {duration: 2, ease: "power1.inOut"});
+
+    // Observer.create({
+    //   target: "#bento-screen",
+    //   onHover: () => {
+    //     gsap.to("#bento-screen", {
+    //     })
+    //   }
+    // });
 
     Draggable.create("#bento-slider-key", {
       type: "x",
@@ -56,11 +80,16 @@ gsap.registerPlugin(Draggable,EaselPlugin,Flip,InertiaPlugin,MotionPathPlugin,Mo
     });
 
 
+    // SLIDER -->
+
     Draggable.create("#cover", {
       type: "x",
       bounds: "#slider-bounds",
       inertia: true
     });
+
+
+    // DOOR -->
 
     Draggable.create("#door01", {
       type: "x"
@@ -79,15 +108,19 @@ gsap.registerPlugin(Draggable,EaselPlugin,Flip,InertiaPlugin,MotionPathPlugin,Mo
     // });
 
 
+    // ROTATE -->
+
     Draggable.create("#rotate-cover", {
       type: "rotation",
       inertia: true
     });
 
     
+    // SHIFT -->
+    
     Draggable.create("#shift-knob", {
       bounds: "#shift-bounds",
-      lockAxis: true,
+      // lockAxis: true,
       inertia: true,
       liveSnap: {
         points: [
@@ -103,6 +136,9 @@ gsap.registerPlugin(Draggable,EaselPlugin,Flip,InertiaPlugin,MotionPathPlugin,Mo
         ],
       }
     });
+
+
+    // KEYPAD -->
 
     Observer.create({target: "#key-1", onClick: () => {$("#key-1-off").toggleClass("show-key"), $("#key-1-on").toggleClass("show-key")}});
     Observer.create({target: "#key-1", onHoverEnd: () => {$("#key-1-off").removeClass("show-key"), $("#key-1-on").addClass("show-key")}});
@@ -135,13 +171,22 @@ gsap.registerPlugin(Draggable,EaselPlugin,Flip,InertiaPlugin,MotionPathPlugin,Mo
     Observer.create({target: "#key-0", onHoverEnd: () => {$("#key-0-off").removeClass("show-key"), $("#key-0-on").addClass("show-key")}});
 
 
-    // Observer.create({
-    //   target: "#blinkers",
-    //   onClick: () => {
-    //     gsap.to("#blinker-red", {
-    //     })
-    //   }
-    // })  
+    // BLINKER -->
+
+    Observer.create({target: "#highlight-99", onClick: () => {$("#blinker-red").addClass("red-light")}});
+    Observer.create({target: "#highlight-99", onHoverEnd: () => {$("#blinker-red").removeClass("red-light")}});
+
+    Observer.create({target: "#highlight-100", onClick: () => {$("#blinker-green").addClass("green-light")}});
+    Observer.create({target: "#highlight-100", onHoverEnd: () => {$("#blinker-green").removeClass("green-light")}});
+
+    Observer.create({target: "#highlight-102", onClick: () => {$("#blinker-blue").addClass("blue-light")}});
+    Observer.create({target: "#highlight-102", onHoverEnd: () => {$("#blinker-blue").removeClass("blue-light")}});
+
+    Observer.create({target: "#highlight-101", onClick: () => {$("#blinker-yellow").addClass("yellow-light")}});
+    Observer.create({target: "#highlight-101", onHoverEnd: () => {$("#blinker-yellow").removeClass("yellow-light")}});
+  
+
+    // TEXT SCRAMBLE -->
 
     // const tl = gsap.timeline({
     //   id: "text-scramble",
