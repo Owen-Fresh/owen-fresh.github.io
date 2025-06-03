@@ -14,11 +14,18 @@ p {
   font-family: "Micro 5", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.25rem;
+  font-size: 1rem;
+}
+
+svg {
+  anchor-name: --text-anchor;
 }
 
 .text-dialog {
-  position: absolute;
+  position: fixed;
+  position-anchor: --text-anchor;
+  left: 655px;
+  bottom: 160px;
 }
 
 #text-dialog-1, #text-dialog-2 {

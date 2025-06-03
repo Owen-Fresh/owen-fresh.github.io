@@ -45,7 +45,7 @@ gsap.registerPlugin(Draggable,EaselPlugin,Flip,InertiaPlugin,MotionPathPlugin,Mo
     });
 
 
-    // BENTO SCREEN AND SLIDER -->
+    // BENTO SCREEN -->
 
         // grab state
     // const state = Flip.getState("#bento-screen");
@@ -63,6 +63,9 @@ gsap.registerPlugin(Draggable,EaselPlugin,Flip,InertiaPlugin,MotionPathPlugin,Mo
     //     })
     //   }
     // });
+
+
+    // BENTO SLIDER -->
 
     Draggable.create("#bento-slider-key", {
       type: "x",
@@ -92,8 +95,15 @@ gsap.registerPlugin(Draggable,EaselPlugin,Flip,InertiaPlugin,MotionPathPlugin,Mo
     // DOOR -->
 
     Draggable.create("#door01", {
-      type: "x"
-    })
+      type: "x",
+      inertia: true,
+      liveSnap: {
+        points: [
+          { x: 0, y: 0 },
+          { x: -88.89, y: 0 }
+        ]
+      }
+    });
 
     // MorphSVGPlugin.convertToPath("#door1", "#door2", "#door3", "#door4", "#door5", "#door6");
 
@@ -188,15 +198,16 @@ gsap.registerPlugin(Draggable,EaselPlugin,Flip,InertiaPlugin,MotionPathPlugin,Mo
 
     // TEXT SCRAMBLE -->
 
-    // const tl = gsap.timeline({
+    // let tl = gsap.timeline({
     //   id: "text-scramble",
     //   defaults: { ease: "none" }
     // });
 
-    // tl.to("#text-dialog-1", {
-    //   duration: 1.5, 
-    //   scrambleText: "Welcome to the Toy Box!"
-    // }).to("#text-dialog-2", {
-    //   duration: 2,
-    //   scrambleText: "Find an Interaction to Begin."
-    // });
+    gsap.to("#text-dialog-1", {
+      duration: 1.5, 
+      scrambleText: "Welcome to the Toy Box!"
+    })
+    gsap.to("#text-dialog-2", {
+      duration: 2,
+      scrambleText: "Find an Interaction to Begin."
+    });
