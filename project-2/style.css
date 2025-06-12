@@ -31,6 +31,10 @@ footer {
   left: 580px;
 }
 
+#door-bounds {
+  fill: none;
+}
+
 #text-dialog-1, #text-dialog-2 {
   color: #f1faf1;
   margin: 0;
@@ -431,5 +435,7 @@ footer {
 .cls-343 {fill: #6080f8;}
 .cls-344 {fill: #1a1a1a;}
 .cls-345 {fill: #999;}
+.cls-345:hover {fill: #f7931e;}
+.cls-345:active {fill: #969696;}
 .cls-346 {fill: #00361c;}
 .cls-347 {fill: #ff1d25;}
