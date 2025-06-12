@@ -2,12 +2,15 @@
 
 * {
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  margin-top: 64px;
+  margin: 64px 0 0 64px;
+}
+
+svg {
+  position: absolute;
 }
 
 p {
@@ -17,20 +20,20 @@ p {
   font-size: 1rem;
 }
 
-svg {
-  anchor-name: --text-anchor;
+footer {
+  position: absolute;
+  bottom: 24px;
 }
 
 .text-dialog {
   position: fixed;
-  position-anchor: --text-anchor;
-  left: 655px;
-  bottom: 160px;
+  top: 524px;
+  left: 580px;
 }
 
 #text-dialog-1, #text-dialog-2 {
-  margin: 0px;
-  color: #f0fefa;
+  color: #f1faf1;
+  margin: 0;
 }
 
 #key-1-press, #key-2-press, #key-3-press, #key-4-press, #key-5-press, #key-6-press, #key-7-press, #key-8-press, #key-9-press, #key-0-press {

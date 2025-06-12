@@ -10,22 +10,6 @@ gsap.registerPlugin(Draggable,EaselPlugin,Flip,InertiaPlugin,MotionPathPlugin,Mo
     });
 
 
-    // DOT LIGHTS -->
-
-    const tl = gsap.timeline({
-      id: "dot-lights",
-      defaults: { ease: "none" }
-    });
-    
-    Observer.create({
-      target: "#dots",
-      onClick: () => {
-        tl.to('#dot-1', {
-        })
-      }
-    });
-
-
     // DROP BOX -->
 
     Observer.create({
@@ -47,22 +31,7 @@ gsap.registerPlugin(Draggable,EaselPlugin,Flip,InertiaPlugin,MotionPathPlugin,Mo
 
     // BENTO SCREEN -->
 
-        // grab state
-    // const state = Flip.getState("#bento-screen");
-      
-    // // Make DOM or styling changes
-    // switchItUp();
-      
-    // // Animate from the initial state to the end state
-    // Flip.from(state, {duration: 2, ease: "power1.inOut"});
-
-    // Observer.create({
-    //   target: "#bento-screen",
-    //   onHover: () => {
-    //     gsap.to("#bento-screen", {
-    //     })
-    //   }
-    // });
+        //
 
 
     // BENTO SLIDER -->
@@ -198,16 +167,12 @@ gsap.registerPlugin(Draggable,EaselPlugin,Flip,InertiaPlugin,MotionPathPlugin,Mo
 
     // TEXT SCRAMBLE -->
 
-    // let tl = gsap.timeline({
-    //   id: "text-scramble",
-    //   defaults: { ease: "none" }
-    // });
-
     gsap.to("#text-dialog-1", {
-      duration: 1.5, 
+      duration: 2, 
       scrambleText: "Welcome to the Toy Box!"
     })
     gsap.to("#text-dialog-2", {
-      duration: 2,
+      duration: 2.25,
+      delay: 2.25,
       scrambleText: "Find an Interaction to Begin."
     });
