@@ -31,7 +31,74 @@ gsap.registerPlugin(Draggable,EaselPlugin,Flip,InertiaPlugin,MotionPathPlugin,Mo
 
     // BENTO SCREEN -->
 
-        //
+    Observer.create({
+      target: "#bento-screen-tl",
+      onHover: () => {
+        gsap.to("#bento-screen-bl", {scaleY: 0.5, y: +55}),
+        gsap.to("#bento-screen-br", {scaleY: 0.5, y: +55}),
+        gsap.to("#bento-screen-tr", {scaleX: .5, scaleY: 1.5, x: +85}),
+        gsap.to("#bento-screen-tl", {scaleY: 1.5, scaleX: 1.5})
+      }});
+    Observer.create({
+      target: "#bento-screen-tl",
+      onHoverEnd: () => {
+        gsap.to("#bento-screen-bl", {scaleY: 1, y: 0}),
+        gsap.to("#bento-screen-br", {scaleY: 1, y: 0}),
+        gsap.to("#bento-screen-tr", {scaleX: 1, scaleY: 1, x: 0}),
+        gsap.to("#bento-screen-tl", {scaleY: 1, scaleX: 1})
+      }});
+
+      Observer.create({
+        target: "#bento-screen-tr",
+        onHover: () => {
+          gsap.to("#bento-screen-bl", {scaleY: 0.5, y: +55}),
+          gsap.to("#bento-screen-br", {scaleY: 0.5, y: +55}),
+          gsap.to("#bento-screen-tl", {scaleX: .5, scaleY: 1.5}),
+          gsap.to("#bento-screen-tr", {scaleY: 1.5, scaleX: 1.5, x: -85})
+        }});
+      Observer.create({
+        target: "#bento-screen-tr",
+        onHoverEnd: () => {
+          gsap.to("#bento-screen-bl", {scaleY: 1, y: 0}),
+          gsap.to("#bento-screen-br", {scaleY: 1, y: 0}),
+          gsap.to("#bento-screen-tl", {scaleX: 1, scaleY: 1}),
+          gsap.to("#bento-screen-tr", {scaleY: 1, scaleX: 1, x: 0})
+        }});
+
+        Observer.create({
+          target: "#bento-screen-bl",
+          onHover: () => {
+            gsap.to("#bento-screen-tl", {scaleY: 0.5}),
+            gsap.to("#bento-screen-tr", {scaleY: 0.5}),
+            gsap.to("#bento-screen-br", {scaleX: .5, scaleY: 1.5, x: +85, y: -55}),
+            gsap.to("#bento-screen-bl", {scaleY: 1.5, scaleX: 1.5, y: -55})
+          }});
+        Observer.create({
+          target: "#bento-screen-bl",
+          onHoverEnd: () => {
+            gsap.to("#bento-screen-tl", {scaleY: 1, y: 0}),
+            gsap.to("#bento-screen-tr", {scaleY: 1, y: 0}),
+            gsap.to("#bento-screen-br", {scaleX: 1, scaleY: 1, x: 0, y: 0}),
+            gsap.to("#bento-screen-bl", {scaleY: 1, scaleX: 1, y: 0})
+          }});
+
+          Observer.create({
+            target: "#bento-screen-br",
+            onHover: () => {
+              gsap.to("#bento-screen-tl", {scaleY: 0.5}),
+              gsap.to("#bento-screen-tr", {scaleY: 0.5}),
+              gsap.to("#bento-screen-bl", {scaleX: .5, scaleY: 1.5, y: -55}),
+              gsap.to("#bento-screen-br", {scaleY: 1.5, scaleX: 1.5, x: -85, y: -55})
+            }});
+      
+          Observer.create({
+            target: "#bento-screen-br",
+            onHoverEnd: () => {
+              gsap.to("#bento-screen-tl", {scaleY: 1, y: 0}),
+              gsap.to("#bento-screen-tr", {scaleY: 1, y: 0}),
+              gsap.to("#bento-screen-bl", {scaleX: 1, scaleY: 1, y: 0}),
+              gsap.to("#bento-screen-br", {scaleY: 1, scaleX: 1, x: 0, y: 0})
+            }});
 
 
     // BENTO SLIDER -->
@@ -73,18 +140,6 @@ gsap.registerPlugin(Draggable,EaselPlugin,Flip,InertiaPlugin,MotionPathPlugin,Mo
         ]
       }
     });
-
-    // MorphSVGPlugin.convertToPath("#door1", "#door2", "#door3", "#door4", "#door5", "#door6");
-
-    // Observer.create({
-    //   target: "#door",
-    //   onDrag: () => {
-    //     gsap.to("#door1", {
-    //       duration: 1,
-    //       morphSVG: "#door2"
-    //     })
-    //   }
-    // });
 
 
     // ROTATE -->
@@ -168,11 +223,11 @@ gsap.registerPlugin(Draggable,EaselPlugin,Flip,InertiaPlugin,MotionPathPlugin,Mo
     // TEXT SCRAMBLE -->
 
     gsap.to("#text-dialog-1", {
-      duration: 2, 
+      duration: 1.5, 
       scrambleText: "Welcome to the Toy Box!"
     })
     gsap.to("#text-dialog-2", {
-      duration: 2.25,
-      delay: 2.25,
+      duration: 2,
+      delay: 1.75,
       scrambleText: "Find an Interaction to Begin."
     });
