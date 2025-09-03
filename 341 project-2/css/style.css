@@ -1,0 +1,557 @@
+/* Neutralizes the default styles applied by browsers */
+@import url("reset.css");
+
+body {
+  background-color: #faf5eb;
+}
+
+main {
+  padding-top: 96px;
+}
+
+h1 {
+  font-family: 'barlow condensed', sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  color: #3b1919;
+}
+
+.page-title h1 {
+  display: block;
+  padding: 32px 0 16px 0;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'barlow condensed', sans-serif;
+  font-size: 3rem;
+  color: #faf5eb;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'barlow condensed', sans-serif;
+  font-size: 2rem;
+  color: #3b1919;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+h4 {
+  font-family: barlow, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #3b1919;
+}
+
+p {
+  font-family: barlow, sans-serif;
+  font-size: 1.25rem;
+  color: #3b1919;
+}
+
+a {
+  font-family: 'barlow condensed', sans-serif;
+  font-size: 2rem;
+  color: #3b1919;
+  white-space: nowrap;
+  transition: all 250ms ease-out;
+}
+
+a:hover {
+  color: #940a0a;
+}
+
+main p {
+  margin: 8px 0 64px 0;
+}
+
+
+/* -- NAV BAR -- */
+
+.this-page {
+  color: #940a0a;
+}
+
+.nav-bar {
+  position: fixed;
+  background-color: #faf5eb;
+  display: flex;
+  height: 96px;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation, .logo {
+  display: flex;
+  gap: 32px;
+  margin: 8px 32px 8px 32px;
+}
+
+@media (max-width: 640px) {
+  .navigation {
+    display: none;
+  }
+}
+
+.logo {
+  height: 72px;
+}
+
+
+
+/* -- Hamburger Icon -- */
+
+.hamburger-icon {
+  font-size: 2rem;
+  color: #3b1919;
+  display: none;
+}
+
+.hamburger-icon:hover {
+  color: #940a0a;
+}
+
+@media (max-width: 640px) {
+  .hamburger-icon {
+    display: inline;
+    padding-right: 32px;
+  }
+}
+
+.mobile-nav-container {
+  background-color: #faf5eb;
+  color: white;
+  font-size: 1.5rem;
+  
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+.mobile-nav-link {
+  transition: all 500ms ease-out;
+}
+
+.mobile-nav-link:hover {
+  color: #940a0a;
+}
+
+.close-button {
+  font-size: 2rem;
+  transition: all 500ms;
+  color: #3b1919;
+
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 20px;
+}
+
+.close-button:hover {
+  color: #940a0a;
+}
+
+
+/* -- LANDING PAGE -- */
+
+.first-body, .second-body {
+  display: flex;
+  padding: 32px;
+  gap: 64px;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-body {
+  background-color: #940a0a;
+}
+
+.first-body h1 {
+  color: #faf5eb;
+}
+
+.first-body p {
+  color: #faf5eb;
+}
+
+.first-body a {
+  color: #940a0a;
+  background-color: #faf5eb;
+  padding: 16px 32px;
+  border: 1px;
+  border-radius: 16px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: all 500ms ease-out;
+}
+
+.first-title {
+  background-color: #940a0a;
+}
+
+.first-title h1 {
+  color: #faf5eb;
+}
+
+.second-body a {
+  color: #faf5eb;
+  background-color: #940a0a;
+  padding: 16px 32px;
+  border: 1px;
+  border-radius: 16px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: all 500ms ease-out;
+}
+
+.spella-text {
+  flex: 1 1 calc(50% - 20px);
+}
+
+.spella-pics {
+  flex: 1 1 calc(50% - 20px);
+  border: 1px;
+  border-radius: 25px;
+  max-height: 512px;
+}
+
+
+@media (max-width:640px) {
+  .first-body {
+    flex-direction: column;
+    padding-bottom: 64px;
+  }
+  
+  .second-body {
+    flex-direction: column;
+    padding-bottom: 64px;
+  }
+  
+  .spella-pics {
+    order: -1;
+  }
+  
+  .first-body h1, .second-body h1 {
+    font-size: 3rem;
+  }
+  .first-body p, .second-body p {
+    font-size: 1.125rem;
+  }
+  .first-body a, .second-body a {
+    font-size: 1.75rem;
+    transition: all 500ms ease-out;
+  }
+}
+
+
+/* -- SHOP PAGE -- */
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.products div {
+  flex: 0 0 25%;
+  align-self: flex-end;
+  padding: 64px;
+}
+
+.products p, .products h4 {
+  text-align: center;
+  margin: 8px;
+}
+
+@media (max-width: 640px) {
+  .products {
+    display: block;
+  }
+  
+  .products div {
+    padding: 32px;
+  }
+  
+  .products img {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: auto;
+  }
+}
+
+
+/* -- CAFFES PAGE -- */
+
+.caffes {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+.caffes p {
+  margin: 0;
+}
+
+.caffe-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.caffe-pics {
+  width: 256px;
+  height: 256px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.partners {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin: 0 16px 64px 16px;
+}
+
+.partners h2 {
+  color: #3b1919;
+  text-decoration: underline;
+}
+
+.partners h3 {
+  margin: 24px 0 8px 0;
+}
+
+.partners h4 {
+  font-family: 'barlow condensed', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.partners p {
+  margin: 0 0 0 0;
+  text-align: center;
+}
+
+.in-caffe {
+  padding: 64px;
+  background-color: #940a0a;
+}
+
+.in-caffe h3 {
+  color: #faf5eb;
+}
+
+.in-caffe p {
+  color: #faf5eb;
+  text-align: left;
+  width: 60%;
+  margin: 16px auto;
+}
+
+.partner-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 32px;
+  gap: 64px;
+}
+
+@media (max-width: 640px) {
+  
+  .caffe-pics {
+    width: 196px;
+    height: 196px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  
+  .caffes h2, .partners h2, .in-caffe h2 {
+    font-size: 2.25rem;
+  }
+  
+  .partners h3, .partner-list h3 {
+    font-size: 1.75rem;
+  }
+  
+  .caffes p, .partners p {
+    font-size: 0.875rem;
+  }
+  
+  .in-caffe p {
+    font-size: 0.875rem;
+    width: 90%;
+  }
+  
+  .partner-list {
+    gap: 48px;
+  }
+}
+
+
+/* -- CREW PAGE -- */
+
+.row-one, .row-two {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 32px;
+  gap: 32px;
+}
+
+.row-one {
+  background-color: #940a0a;
+}
+
+.row-one h4, .row-one p {
+  color: #faf5eb;
+}
+
+.crew-pic {
+  width: 50%;
+  object-fit: contain;
+  margin: 16px 0 16px 0;
+  flex: 1 2 33%;
+}
+
+.crew-copy {
+  flex: 1 1 67%;
+}
+
+.crew-copy h4 {
+  font-size: 1rem;
+}
+
+.crew-copy p {
+  font-size: 0.875rem;
+  margin: 0 0 16px 0;
+}
+
+.andrea, .chelsea, .francisco, .ds, .austin, .julia, .rossalina {
+  display: flex;
+  flex: 1 1 calc(50% - 32px);
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 32px;
+}
+
+.chelsea img {
+  width: 33%;
+}
+
+@media (max-width: 960px) {
+  
+  .andrea, .chelsea, .francisco, .ds, .austin, .julia, .rossalina {
+    display: block;
+  }
+  
+  .row-one, .row-two {
+    align-items: baseline;
+  }
+}
+
+@media (max-width: 640px) {
+  
+  .row-one, .row-two {
+    display: block;
+    padding: 0;
+  }
+  
+  .row-one {
+    background-color: transparent;
+  }
+  
+  .andrea, .chelsea, .francisco, .ds, .austin, .julia, .rossalina {
+    display: flex;
+  }
+  
+  .andrea, .francisco, .austin, .rossalina {
+    background-color: #940a0a;
+    padding: 16px 16px 16px 32px;
+  }
+  
+  .andrea img, .francisco img, .austin img, .rossalina img {
+    order: 2;
+  }
+  
+  .francisco h4, .francisco p, .rossalina h4, .rossalina p {
+    color: #faf5eb;
+  }
+  
+  .chelsea, .ds, .julia {
+    padding: 16px 32px 16px 16px;
+  }
+  
+  .chelsea, .julia {
+    background-color: #faf5eb;
+  }
+  
+  .chelsea h4, .julia h4, .chelsea p, .julia p {
+    color: #3b1919;
+  }
+}
+
+
+
+/* -- FOOTER -- */
+
+.footer {
+  padding: 32px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.socials {
+  padding-bottom: 8px;
+}
+
+.footer a {
+  font-size: 1.25rem;
+  text-decoration: underline;
+}
+
+.socials a {
+  text-decoration: none;
+  margin: 16px;
+}
+
+
+/* -- ACTIVE TAGS -- */
+
+.first-body a:active {
+  color:#940a0a;
+  background-color: #faf5eb;
+  padding: 16px 32px;
+  border: 8px black;
+  border-radius: 16px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25) inset;
+}
+
+.second-body a:active {
+  color: #faf5eb;
+  background-color: #940a0a;
+  padding: 16px 32px;
+  border: 1px black;
+  border-radius: 16px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25) inset;
+}

@@ -1,0 +1,403 @@
+body {
+  background-color: #e6e6e6;
+  font-family: Rubik, Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+dialog {
+  padding: 4px;
+  border: #c3c8cd;
+  border-radius: 2px;
+  overflow-y: scroll;
+}
+
+dialog[open] {
+  animation: open ease-out 500ms forwards;
+}
+
+dialog[closing] {
+  animation: close ease-in 350ms forwards;
+}
+
+@keyframes open {
+  0% {opacity: 0%; 
+      scale: 0;
+      transform-origin: -5% top;}
+
+  50% {opacity: 100%;}
+
+  100% {scale: 1;}
+}
+
+@keyframes close {
+  0% {scale: 1;
+      transform-origin: 50% -50%;}
+
+  50% {opacity: 100%;}
+
+  100% {opacity: 0%;
+        scale: 0;}
+}
+
+.Icons {
+  display: grid;
+  grid-template-columns: 128px 128px;
+  margin-top: 24px;
+  margin-left: 24px;
+  margin-bottom: 32px;
+  font-size: 12px;
+  font-weight: 400;
+  text-align:center;
+}
+
+.Dialog-Icons {
+  display: grid;
+  grid-template-columns: 108px 108px 108px 108px 108px;
+  align-items: center;
+  column-gap: 8px;
+  row-gap: 8px;
+  padding: 8px;
+  font-size: 12px;
+  text-align: center;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+  appearance: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.My-Work, .Working {
+  width: 72px;
+  height: 102px;
+  margin-bottom: 16px;
+  padding: 8px;
+}
+
+.About-Me, .Writing {
+  width: 64px;
+  height: 96px;
+  padding: 8px;
+}
+
+.Reading {
+  width: 72px;
+  height: 104px;
+  padding: 8px;
+}
+
+.My-Work:hover, .Working:hover, .About-Me:hover,
+.Writing:hover, .Reading:hover {
+  background-color: rgb(240, 240, 240);
+  border: 2px;
+  border-color: rgb(245, 245, 245);
+  border-radius: 2px;
+  transform: scale(105%);
+}
+
+.CoinBoy:hover, .FreshAir:hover, .BeLikeUs:hover, 
+.Gothic:hover, .Sunrise:hover, .TSAP:hover,
+.Lever:hover, .Monopolies:hover {
+  background-color: rgb(215, 215, 220);
+  border: 2px;
+  border-color: rgb(230, 230, 235);
+  border-radius: 2px;
+  transform: scale(105%);
+}
+
+.My-Work:active, .Working:active, .About-Me:active,
+.Writing:active, .Reading:active, .TSAP:active {
+  background-color: rgb(225, 225, 225);
+  border-width: 4px;
+  border-color: #fffafa;
+  transform: scale(97%);
+}
+
+.CoinBoy:active, .FreshAir:active, .BeLikeUs:active, 
+.Gothic:active, .Sunrise:active,
+.Lever:active, .Monopolies:active {
+  background-color: rgb(215, 215, 215);
+  border: 2px;
+  border-color: rgb(225, 225, 225);
+  border-radius: 2px;
+  transform: scale(97%);
+}
+
+.fresh {
+  width: 128px;
+}
+
+.fresh:hover {
+  transform: scale(105%);
+}
+
+.fresh:active {
+  transform: scale(97%);
+}
+
+.freshman {
+  display: flex;
+  width: 160px;
+  padding-top: 160px;
+  padding-left: 160px;
+}
+
+.Welcome {
+  z-index: 2;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translate(75% 75%);
+  width: 624px;
+  height: 312px;
+  background-color: #c3c8cd;
+  box-shadow: 8px 8px 1px #000000;
+  font-size: 24px;
+}
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  color: #fffafa;
+  height: 32px;
+  padding: 8px;
+  text-shadow: 1px 1px 0px #000000;
+  background-color: #1926cc;
+}
+
+.X {
+  font-size: 20px;
+  width: 24px;
+  height: 24px;
+  margin-left: 12px;
+  margin-right: 8px;
+  color: #000000;
+  background-color: #e6e6e6;
+  box-shadow: 2px 2px 0px #000000;
+}
+
+.X:hover {
+  transform: scale(105%);
+}
+
+.X:active {
+  transform: scale(97%);
+}
+
+.Text-Container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 624px;
+  height: 264px;
+  background-color: #e6e6e6;
+  box-shadow: inset -2px -2px 2px #000000;
+  border-radius: 2px;
+}
+
+.Greeting {
+  position: absolute;
+  width: 608px;
+  top: 48px;
+  left: 16px;
+  font-size: 20px;
+}
+
+.About {
+  z-index: 3;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  width: 496px;
+  height: 528px;
+  background-color: #c3c8cd;
+  box-shadow: 8px 8px 1px #000000;
+  font-size: 24px;
+}
+
+.About-Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  color: #fffafa;
+  height: 32px;
+  padding: 8px;
+  text-shadow: 1px 1px 0px #000000;
+  background-color: #1926cc;
+}
+
+.About-Text {
+  width: 496px;
+  height: 480px;
+  background-color: #e6e6e6;
+  box-shadow: inset -2px -2px 2px #000000;
+  border-radius: 2px;
+}
+
+.About-Copy {
+  position: absolute;
+  width: 456px;
+  top: 48px;
+  left: 16px;
+  font-size: 20px;
+}
+
+.Work {
+  z-index: 3;
+  position: absolute;
+  top: 20%;
+  left: -3%;
+  width: 588px;
+  height: 312px;
+  background-color: #c3c8cd;
+  box-shadow: 8px 8px 1px #000000;
+  font-size: 24px;
+}
+
+.Work-Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  color: #fffafa;
+  height: 32px;
+  padding: 8px;
+  text-shadow: 1px 1px 0px #000000;
+  background-color: #1926cc;
+}
+
+.Work-Subhead {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 572px;
+  height: 56px;
+  background-color: #e6e6e6;
+  padding: 8px;
+}
+
+.Work-Body {
+  width: 624px;
+  height: 232px;
+  background-color: #fffafa;
+  border-radius: 2px;
+}
+
+.Working-On {
+  z-index: 4;
+  position: absolute;
+  top: 27%;
+  left: 2%;
+  width: 588px;
+  height: 312px;
+  background-color: #c3c8cd;
+  box-shadow: 8px 8px 1px #000000;
+  font-size: 24px;
+}
+
+.Working-Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  color: #fffafa;
+  height: 32px;
+  padding: 8px;
+  text-shadow: 1px 1px 0px #000000;
+  background-color: #1926cc;
+}
+
+.MyWriting {
+  z-index: 5;
+  position: absolute;
+  top: 34%;
+  left: 7%;
+  width: 588px;
+  height: 312px;
+  background-color: #c3c8cd;
+  box-shadow: 8px 8px 1px #000000;
+  font-size: 24px;
+}
+
+.Writing-Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  color: #fffafa;
+  height: 32px;
+  padding: 8px;
+  text-shadow: 1px 1px 0px #000000;
+  background-color: #1926cc;
+}
+
+.Writing-Subhead {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 572px;
+  height: 56px;
+  background-color: #e6e6e6;
+  padding: 8px;
+}
+
+.Project-Body {
+  z-index: 5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #c3c8cd;
+  font-size: 24px;
+  width: 1024px;
+  height: 630px;
+}
+
+.Project-Header {
+  position: sticky;
+  top: -4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  color: #fffafa;
+  height: 32px;
+  padding: 8px;
+  text-shadow: 1px 1px 0px #000000;
+  background-color: #1926cc;
+}
+
+.Project-Subhead {
+  position: sticky;
+  top: 44px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 1008px;
+  height:88px;
+  background-color: #e6e6e6;
+  padding: 8px;
+}
+
+.Projects {
+  display: flex;
+  padding: 4px;
+  justify-content: center;
+  height: 472px;
+}
+
+.Figma {
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+}

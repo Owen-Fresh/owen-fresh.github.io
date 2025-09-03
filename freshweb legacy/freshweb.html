@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>freshweb - the best site since sliced bread!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="freshweb.css">
+    <script defer src="freshweb.js"></script>
+  </head>
+
+  <body>
+    <div class="Icons">
+      <div class="My-Work">
+         <button data-Work-target>
+          <img 
+          style="width: 64px;"
+          src="Icons03_1x/folder.png">
+        </button>
+        <p>My Work</p>
+      </div>
+      <div class="About-Me">
+        <button data-About-target>
+          <img 
+          style="width: 43px;"
+          src="Icons03_1x/pages.png">
+        </button>
+        <p>About Me</p>
+      </div>
+      <div class="Working">
+        <button data-Working-target>
+          <img 
+          style="width: 64px;"
+          src="Icons03_1x/folder.png">
+        </button>
+        <p>What I'm Working On</p>
+      </div>
+      <div class="Writing">
+        <button data-Writing-target>
+          <img 
+          style="width: 43px;"
+          src="Icons03_1x/pages.png">
+        </button>
+        <p>My Writing</p>
+      </div>
+      <div class="Reading" hidden>
+        <button>  
+          <img 
+          style="width: 64px;"
+          src="Icons03_1x/book.png">
+        </button>
+        <p>What I'm Reading</p>
+      </div>
+    </div>
+  <div class="freshman">
+    <button data-Welcome-target>
+      <img
+        class="fresh"
+        src="Icons03_2x/fresh2x.png">
+    </button>
+  </div>
+  <div id="Welcome-Modal"> 
+    <dialog data-Welcome class="Welcome">
+      <div class="Header">  
+        <button data-close-button class="X">&times;</button>
+        <p>Welcome!</p>
+      </div>
+      <div class="Text-Container">
+        <svg class="Text-box"></svg>
+        <div class="Greeting">
+          <p>Oh, uh, golly!
+            Sorry for being surprised, it's just that folks don't come around here much anymore. Not since Owen did the redesign. 
+            It's good that he did, because this site is <em>super</em> rudimentary. 
+            Owen was still learning how to code when he built this, so freshweb was in desperate need of a refresh!
+            If you're on mobile, you know what I'm talking about. Don't even get me started on the utter lack of semantic tags!
+            It's all for the best, and now I can just hang around until the tech oligarchs take over!
+          </p>
+          <p>Anyway, feel free to look around, and thanks for stopping by!</p>
+
+          <!-- <p>Hiya!</p>
+          <p>Welcome to freshweb, the best site since sliced bread! I'm Owen_Fresh, the guy in charge of this place.</p>
+          <p>This is the portfolio site for Owen Cook, but if you'd like to know more about him, take a look at <strong>About Me</strong>.</p>
+          <p>Or you can check out <strong>My Work</strong> first, or see <strong>What I'm Working On</strong> right now!</p> -->
+        </div>
+      </div>
+    </dialog>
+  </div> 
+  
+  <dialog id="About" data-About class="About">
+    <div id="header" class="About-Header">
+      <button data-About-close class="X">&times;</button>
+      <p>About Me</p>
+    </div>
+    <div>
+      <svg class="About-Text"></svg>
+      <div class="About-Copy">
+        <p>I am Owen Cook (He/Him), a Graphic Design student at Portland State University.</p>
+        <p>Born and raised here in Portland, Oregon, I first found my passion for design while taking an art class at Clackamas Community College. I found a connection with the challenge of using creative problem solving to make interesting visual solutions. From there, I transferred my credits to PSU to continue my journey as a designer.</p>
+        <p>My areas of interest in the field are UI/UX, Web Development, and Motion Design. I am most fascinated with how we as users interact with technology and interfaces.</p>
+        <P>Feel free to reach out to me at owencook359@gmail.com!</P>
+        <p>Thanks for stopping by, and enjoy my work!</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog data-Work class="Work">
+    <div class="Work-Header">
+      <button data-Work-close class="X">&times;</button>
+      <p>My Work</p>
+    </div>
+    <div class="Work-Subhead">
+      <p>A collection of projects that I've made so far, mainly consisting of work from my classes.</p>
+    </div>
+    <div class="Dialog-Icons">
+      <div class="CoinBoy">  
+        <button data-Coin-target>
+          <img 
+            style="width: 64px;"
+            src="freshwebprojects/24Winter_DES140/CoinBoy_Portrait-128px.png">
+        </button>
+        <p>Coin Boy: Arcade App Prototype</p>
+      </div>
+      <div class="FreshAir">
+        <button data-Air-target>
+          <img 
+            style="width: 64px;"
+            src="freshwebprojects/24Spring_DES225/Fresh Air/FreshAir_Mascot-128px.png">
+        </button>
+        <p>Fresh Air: Spacial Design Project</p>
+      </div>
+      <div class="BeLikeUs">
+        <button data-Beverage-target>
+          <img
+            style="width: 64px;"
+            src="freshwebprojects/24Spring_DES225/Be Like Us!/FreshWeb_BeLikeUs-128px.png">
+        </button>
+        <p>Be Like Us! Beverage Project</p>
+      </div>
+      <div class="Gothic">
+        <button data-Gothic-target>
+          <img
+            style="height: 64px;"
+            src="freshwebprojects/CCC_ART115/GothicGrub_Logo-128px04.png">
+        </button>
+        <p>Gothic Grub: Food Truck Project</p>
+      </div>
+      <div class="Sunrise">
+        <button data-Sunrise-target>
+          <img
+            style="width: 64px;"
+            src="freshwebprojects/24Fall_DES354/SunriseProject_Mascot-128px02.png">
+        </button>
+        <p>Sunrise Project Campaign</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog data-Working class="Working-On">
+    <div class="Working-Header">
+      <button data-Working-close class="X">&times;</button>
+      <p>What I'm Working On</p>
+    </div>
+    <div class="Work-Subhead">
+      <p>No Current WIPs to share! Be sure to check back in soon.</p>
+    </div>
+    <div class="Dialog-Icons">
+      <div class="TSAP">
+        <button hidden>
+          <img 
+            style="width: 64px;"
+            src="Icons03_1x/folder.png">
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog data-MyWriting class="MyWriting">
+    <div class="Writing-Header">
+      <button data-Writing-close class="X">&times;</button>
+      <p>My Writing</p>
+    </div>
+    <div class="Writing-Subhead">
+      <p>A collection of op-ed, zines, and other pieces of writing that I've done.</p>
+    </div>
+    <div class="Dialog-Icons">
+      <div class="Lever">
+        <button data-Lever-target>
+          <img
+            style="width: 48px;"
+            src="Icons03_1x/book.png">
+        </button>
+        <p>Guide to Leverless Controllers Zine</p>
+      </div>
+      <div class="Monopolies">
+        <button data-Monopolies-target>
+          <img
+            style="width: 32.25px;"
+            src="Icons03_1x/pages.png">
+        </button>
+        <p>Tech Monopolies Op-Ed</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog data-Coin class="Project-Body">
+    <div class="Project-Header">
+      <button data-Coin-close class="X">&times;</button>
+      <p>Coin Boy: Arcade App Prototype</p>
+    </div>
+    <div class="Project-Subhead">
+      <p>A class project that focused on taking an everyday object and turning it into a better user interface. I took an arcade playcard and built an app prototype to create a more engaging and frictionless user experience.</p>
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Winter_DES140/270524_1.jpg">
+    </div>
+    <div class="Figma">
+      <a href="https://www.figma.com/proto/PzEYOCZhHPSzGrLbF3XUqC/Owen_DES140_Proj01_ArcadeApp?page-id=409%3A458&node-id=409-459&p=f&viewport=-240%2C437%2C0.25&t=ikDx3uWlpHaF8vLV-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=409%3A459&show-proto-sidebar=1" target="_blank">
+        Check out the App Prototype in Figma!</a>
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Winter_DES140/Home Screen.png">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Winter_DES140/Load Credits.png">
+      <img src="freshwebprojects/24Winter_DES140/Pay with Card.png">
+      <img src="freshwebprojects/24Winter_DES140/Confirm Payment.png">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Winter_DES140/Game Screen.png">
+      <img src="freshwebprojects/24Winter_DES140/Queue Up Full.png">
+      <img src="freshwebprojects/24Winter_DES140/Start Game.png">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Winter_DES140/Gameplay Animation.png">
+      <img src="freshwebprojects/24Winter_DES140/Game Over 02.png">
+      <img src="freshwebprojects/24Winter_DES140/Rewards01.png">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Winter_DES140/Leaderboard01.png">
+      <img src="freshwebprojects/24Winter_DES140/Play History01.png">
+      <img src="freshwebprojects/24Winter_DES140/Play History02.png">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Winter_DES140/270524_2.jpg">
+    </div>
+  </dialog>
+
+  <dialog data-Air class="Project-Body">
+    <div class="Project-Header">
+      <button data-Air-close class="X">&times;</button>
+      <p>Fresh Air: Spacial Design Project</p>
+    </div>
+    <div class="Project-Subhead">
+      <p>A class project that challenged me to design a space for people to gather in. I built my concept around the idea of an open, communal space that compensated for the contemporary loss of 'third-places' for most people.</p>
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Spring_DES225/Fresh Air/DES225_Proj02_Exterior04.jpg">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Spring_DES225/Fresh Air/DES225_Proj02_Interior05.jpg">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Spring_DES225/Fresh Air/DES225_Proj02_Clipboards02.png">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Spring_DES225/Fresh Air/DES225_Proj02_BulletinBoard.png">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Spring_DES225/Fresh Air/DES225_Proj02_MuralWall04.jpg">
+    </div>
+  </dialog>
+
+  <dialog data-Beverage class="Project-Body">
+    <div class="Project-Header">
+      <button data-Beverage-close class="X">&times;</button>
+      <p>Be Like Us!: Beverage Packaging Project</p>
+    </div>
+    <div class="Project-Subhead">
+      <p>A class project that involved designing packaging for a beverage, which I took as an opportunity to create a unique, conceptual piece about a program (drink-presenting code) that androids could download to feel human emotions.</p>
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Spring_DES225/Be Like Us!/beveragepic.jpg">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Spring_DES225/Be Like Us!/DES225_Proj01_FullLabel03.png">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Spring_DES225/Be Like Us!/130524_3.png">
+      <img src="freshwebprojects/24Spring_DES225/Be Like Us!/130524_6.png">
+    </div>
+    <div class="Projects">
+      <video controls>
+        <source src="freshwebprojects/24Spring_DES225/Be Like Us!/DES225_Proj01_DigiDrink.mp4" type="video/mp4">
+      </video>
+    </div>
+  </dialog>
+
+  <dialog data-Gothic class="Project-Body">
+    <div class="Project-Header">
+      <button data-Gothic-close class="X">&times;</button>
+      <p>Gothic Grub: Food Truck Project</p>
+    </div>
+    <div class="Project-Subhead">
+      <p>A self-initiated design that revisited the final of a old class, where I took a design for a food truck and turned it into a well-rounded brand for a medieval-inspired food truck, including a menu, business card, and an Instagram page mockup.</p>
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/CCC_ART115/Art115_FoodTruck_Deliverable03.jpg">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/CCC_ART115/ART115_FoodTruck_Menu.png">
+      <img src="freshwebprojects/CCC_ART115/ART115_FoodTruck_BusinessCards.png">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/CCC_ART115/ART115_FoodTruck_SocialPage.png">
+    </div>
+  </dialog>
+
+  <dialog data-Sunrise class="Project-Body">
+    <div class="Project-Header">
+      <button data-Sunrise-close class="X">&times;</button>
+      <p>The Sunrise Project: An Awareness Campaign</p>
+    </div>
+    <div class="Project-Subhead">
+      <p>A class project about using typography to promote a campaign of my design, which I directed towards a fun branding and merch-focused awareness campaign for promoting the benefits of solar energy. Contents can be found on a Figma website mockup.</p>
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Fall_DES354/Landing05.png">
+    </div>
+    <div class="Figma">
+      <a href="https://www.figma.com/proto/8mo73RTfciV2fLcyImTeHp/DES354_Proj02_Website?page-id=0%3A1&node-id=226-831&node-type=frame&viewport=910%2C-707%2C0.25&t=ovRaZos8T6g6I8dV-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=226%3A831" target="_blank">
+        Check Out the Website Mockup on Figma!</a>
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Fall_DES354/DES354_Proj01_T-Shirts.jpg">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Fall_DES354/DES354_Proj01_StickerPack.jpg">
+    </div>
+  </dialog>
+
+
+  <dialog data-Leverless class="Project-Body">
+    <div class="Project-Header">
+      <button data-Leverless-close class="X">&times;</button>
+      <p>A Beginner's Guide to Leverless Controllers Mainly for Fighting Games</p>
+    </div>
+    <div class="Project-Subhead">
+      <p>A class project where I had to deconstruct an object. I created a zine about the leverless controller that has grown popular within the fighting game community in order to give an introduction to what this unique piece of technology is.</p>
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Fall_DES320/Leverless/FrontCover.jpg">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Fall_DES320/Leverless/01:02.jpg">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Fall_DES320/Leverless/03:04.jpg">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Fall_DES320/Leverless/05:06.jpg">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Fall_DES320/Leverless/07:08.jpg">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Fall_DES320/Leverless/09:10.jpg">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Fall_DES320/Leverless/11.jpg">
+      <img src="freshwebprojects/24Fall_DES320/Leverless/12.jpg">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Fall_DES320/Leverless/13.jpg">
+      <img src="freshwebprojects/24Fall_DES320/Leverless/14.jpg">
+    </div>
+    <div class="Projects">
+      <img src="freshwebprojects/24Fall_DES320/Leverless/BackCover.jpg">
+    </div>
+  </dialog>
+
+  <dialog data-Monopolies class="Project-Body">
+    <div class="Project-Header">
+      <button data-Monopolies-close class="X">&times;</button>
+      <p>Monopolization Within the Tech Industry and the Danger That It Poses</p>
+    </div>
+    <div class="Project-Subhead">
+      <p>A class project that involved writing a visual op-ed using both writing and images. After reading other Op-Eds, I was inspired to write a piece on how the Chinese superapp WeChat and the Big 5 in American Tech are establishing themselves a threat to our society.</p>
+    </div>
+    <div>
+      <img
+        style="width: 1024px;" 
+        src="freshwebprojects/24Fall_DES320/DES320_Proj01_WebPage.jpg">
+    </div>
+  </dialog>
+  </body>
+</html>
