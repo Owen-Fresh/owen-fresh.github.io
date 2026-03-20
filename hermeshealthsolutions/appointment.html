@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hermes Health Solutions</title>
+  <meta name="description" content="Hermes Health Solutions is the Thesis Project of Owen Cook, intending to create an inaccessible website in order to highlight the value of properly accessible web design">
+  <meta name="author" content="Owen Cook">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/mmg3pxb.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+  
+  <header>
+    <section class="header">
+      <nav class="nav">
+        <ul>
+          <li><a href="landing.html">Home</a></li>
+          <li><a href="appointment.html">Appointment</a></li>
+          <li><a href="medication.html">Medication</a></li>
+          <li><a href="bills.html">Bills</a></li>
+          <li><a href="benefits.html">Benefits</a></li>
+          <li><a href="records.html">Records</a></li>
+          <li><a href="login.html">Sign In</a></li>
+        </ul>
+      </nav>
+
+      <section class="header-1">
+        <a href="landing.html">
+          <img src="images/logo.png" class="logo" alt="Hermes Health Solutions wordmark and logo, a lowercase h with a winged snake constricting the vertical bar of the h">
+        </a>
+
+        <div>
+          <a href="login.html" class="account">
+            <i class="material-icons">account_circle</i>
+          </a>
+          <a href="search.html" class="account">
+            <i class="material-icons">search</i>
+          </a>
+        </div>
+      </section>
+    </section>
+
+    <section class="head">
+      <h2>Schedule Appointment</h2>
+      <p>If you or a loved one are having a medical crisis or emergency, why are you here? Go to a hospital. Call an ambulance. We know that they cost a lot of money, that&apos;s by design. I get that we have to put this disclaimer here for legal purposes or whatever, but that all should be obvious.</p>
+
+      <section class="account">
+        <a href="login.html">
+          <i class="material-icons">account_circle</i>
+        </a>
+        <a href="search.html">
+          <i class="material-icons">search</i>
+        </a>
+        <a href="#">
+          <i class="material-icons">shopping_cart</i>
+        </a>
+      </section>
+    </section>
+  </header>
+
+  <main>
+    <section class="schedule">
+      <section>
+        <div>
+          <label for="month"></label>
+          <select name="month" id="month">
+            <option value="MM">MM</option>
+            <option value="12">12</option>
+            <option value="11">11</option>
+            <option value="10">10</option>
+            <option value="9">9</option>
+            <option value="8">8</option>
+            <option value="7">7</option>
+            <option value="6">6</option>
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+          </select>
+        </div>
+        <div>
+          <table>
+            <tr>
+              <th>M</th><th>Tu</th><th>W</th><th>Th</th><th>F</th><th>Sa</th><th>Su</th><th>M</th><th>T</th><th>W</th>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td>
+            </tr>
+            <tr>
+              <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td>
+            </tr>
+            <tr>
+              <td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td>
+            </tr>
+            <tr>
+              <td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td>
+            </tr>
+            <tr>
+              <td>30</td><td>31</td>
+            </tr>
+          </table>
+        </div>
+        <div>
+          <input placeholder="YYYY" type="text" value="YYYY">
+          <div>
+            <label for="time"></label>
+            <input name="time" placeholder="00:00" type="text" value="00:00">
+            <label for="time of day"></label>
+            <select name="time of day" id="time">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      <img src="images/doctor-group.jpg" alt="group of doctors standing together, looking at the camera and smiling">
+    </section>
+
+    <section class="schedule-3">
+      <label for="Reason for Visit"></label>
+      <input name="Reason for Visit" placeholder="Reason for Visit" type="text" value="Reason for Visit">
+      <label for="Select a Provider"></label>
+      <input name="Select a Provider" placeholder="Select a Provider" type="text" value="Select a Provider">
+    </section>
+
+    <section class="schedule-2">
+      <label for="Visit Location"><h3>Visit Location</h3></label>
+      <select name="Visit Location" class="schedule-2">
+        <option value="In Office">In Office</option>
+        <option value="In the Other Office">In the Other Office</option>
+        <option value="Remote">Remote</option>
+        <option value="Phone Call">Phone Call</option>
+      </select>
+    </section>
+
+    <section class="submit">
+      <button id="btn-1">Select</button>
+    </section>
+
+    <div id="modal-1" class="err-modal">
+
+      <div class="err-modal-content">
+        <div class="err-header">
+          <h2>ERROR</h2>
+        </div>
+        <span class="back-1">&#10062;</span>
+        <div class="err-body">
+          <p>It looks like you have some unpaid bills.</p>
+          <p>Certain services cannot be provided until they are <a href="pay.html">paid</a>.</p>
+          <p>If you believe that there is an error, check your current <a href="bills.html">Account</a> balance.</p>
+        </div>
+      </div>
+    
+    </div>
+    
+  </main>
+
+  <footer>
+    <section class="footer">
+      <p class="foot-copy">Hermes Health Solutions is the Thesis project for Owen Cook, a Graphic Design student at Portland State University. Focusing on User Interface and User Experience Design, he found a particular interest in Web Accessibility as part of his humanist, user-centered values. While researching, he was struck by the realization that accessible design guidelines made complete sense for a universally effective user experience, both for disabled and abled users. This lead to him developing this project, an anti-design experiment in creating an inaccessible site to highlight how valuable accessible design is for all users, including those who may take it for granted. Why make it a healthcare website in particular? Think about it.</p>
+
+      <img src="images/logo.png" style="height: 128px;" alt="Hermes Health Solutions wordmark and logo, a lowercase h with a winged snake constricting the vertical bar of the h">
+
+      <div class="meta">
+        <p>Copyright Owen Cook 2026</p>
+        <a href="https://www.figma.com/proto/T7W4hR4EwKGJY5ZuvgTvdk/Thesis?page-id=554%3A730&node-id=554-837&viewport=346%2C293%2C0.06&t=L7GI0CEmM9CDYnFq-1&scaling=contain&content-scaling=fixed&starting-point-node-id=554%3A1283" target="_blank"><p>Final Presentation</p></a>
+        <p>Photo Credit to Pexels</p>
+      </div>
+    </section>
+
+    <nav>
+      <ul>
+        <li><a href="landing.html">Home</a></li>
+        <li><a href="appointment.html">Appointment</a></li>
+        <li><a href="medication.html">Medication</a></li>
+        <li><a href="bills.html">Bills</a></li>
+        <li><a href="benefits.html">Benefits</a></li>
+        <li><a href="records.html">Records</a></li>
+        <li><a href="login.html">Sign In</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+<script src="script.js"></script>
+<script src="bills.js"></script>
+</body>
+</html>
