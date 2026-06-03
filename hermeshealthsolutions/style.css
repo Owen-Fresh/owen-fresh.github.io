@@ -107,6 +107,11 @@ tr {
   color: #8FB6BD;
 }
 
+.reset-button {
+  background-color: #734C31;
+  width: 100vw;
+}
+
 .header {
   display: flex;
   align-items: center;
